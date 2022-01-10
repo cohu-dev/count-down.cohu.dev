@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 .react-datepicker__input-container input {
-  border: 2px solid;
+  border: 1.5px solid rgb(214, 212, 212);
   padding: 5px;
 }

@@ -6,10 +6,9 @@ import DateTimePick from "./DateTimePick";
 import Countdown from "../Countdown";
 
 const Flow = () => {
-  const today = new Date();
-  const tomorrow = new Date(today);
-  tomorrow.setHours(tomorrow.getHours() + 1);
-  const [due, setDue] = useState(tomorrow);
+  const after = new Date();
+  after.setHours(after.getHours() + 1);
+  const [due, setDue] = useState(after);
   const [url, setUrl] = useState("");
   useEffect(() => {
     setUrl(
@@ -21,7 +20,7 @@ const Flow = () => {
   return (
     <section className="text-gray-600 body-font">
       <Countdown t={due} />
-      <div className="md:px-5 py-5 mx-auto flex flex-wrap">
+      <div className="md:px-5 py-2 mx-auto flex flex-wrap">
         <DateTimePick due={due} setDue={setDue} />
         <CopyURL url={url} />
         <OpenNotion />

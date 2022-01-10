@@ -9,7 +9,7 @@ const Header = () => {
       </p>
       <p className="flex">
         <a href="https://twitter.com/cohu_dev" target="_blank">
-          <BsTwitter className="h-6 w-6 text-blue-400 mr-2" />
+          <BsTwitter className="h-6 w-6 text-blue-400 mr-4" />
         </a>
         <a href="https://github.com/cota-eng/notion-count-down" target="_blank">
           <BsGithub className="h-6 w-6 text-black-400" />

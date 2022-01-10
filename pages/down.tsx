@@ -10,7 +10,8 @@ const down = () => {
   const now = Date.now();
   const [time, setTime] = useState(0);
   useInterval(() => {
-    setTime(() => Number(t) * 1000 - Math.floor(now));
+    setTime(() => Number(t) * 1000 - now);
+    if (isNaN(+t)) router.push("/");
   }, 1000);
   if (time < 0)
     return (
