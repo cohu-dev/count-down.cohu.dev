@@ -10,21 +10,22 @@ const down = () => {
   const now = new Date().getTime();
   const [time, setTime] = useState(0);
   useInterval(() => {
-    setTime(() => Number(t) - now);
+    setTime(() => Number(t) - Math.floor(now));
   }, 1000);
   if (time < 0)
     return (
       <div className="h-screen flex items-center justify-center text-2xl">
+        {now}
         このカウントダウンは既に終了しています
       </div>
     );
   return (
     <div className="h-screen flex items-center justify-center">
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-        <Card n={Math.floor(time / (1000 * 60 * 60 * 24))} digit="日" />
-        <Card n={new Date(time).getHours()} digit="時間" />
-        <Card n={new Date(time).getMinutes()} digit="分" />
-        <Card n={new Date(time).getSeconds()} digit="秒" />
+      <div className="grid grid-cols-4 gap-2">
+        <Card n={Math.floor(time / (1000 * 60 * 60 * 24))} digit="Days" />
+        <Card n={new Date(time).getUTCHours()} digit="Hours" />
+        <Card n={new Date(time).getMinutes()} digit="Minutes" />
+        <Card n={new Date(time).getSeconds()} digit="Seconds" />
       </div>
     </div>
   );

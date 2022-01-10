@@ -29,4 +29,4 @@ const Embed = () => {
   );
 };
 
-export default Embed;
+export default React.memo(Embed);

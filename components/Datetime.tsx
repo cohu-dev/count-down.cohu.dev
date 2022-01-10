@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale, setDefaultLocale } from "react-datepicker";
@@ -20,9 +20,8 @@ const Datetime: React.FC<Props> = ({ due, setDue }) => {
       timeCaption="時間"
       dateFormat="MMMM d, yyyy h:mm aa"
       locale="ja"
-      minDate={due}
     />
   );
 };
 
-export default Datetime;
+export default React.memo(Datetime);

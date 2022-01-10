@@ -5,7 +5,7 @@ type Props = {
 };
 const Card: React.FC<Props> = ({ n, digit }) => {
   return (
-    <div className="bg-amber-100 w-24 h-24 p-2 rounded-lg">
+    <div className="bg-orange-100 w-24 h-24 p-2 rounded-lg">
       <p className="flex items-center justify-center text-6xl font-extrabold">
         {n}
       </p>
@@ -16,4 +16,4 @@ const Card: React.FC<Props> = ({ n, digit }) => {
   );
 };
 
-export default Card;
+export default React.memo(Card);

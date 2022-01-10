@@ -21,7 +21,7 @@ const CopyURL: React.VFC<Props> = ({ url }) => {
         </div>
         <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
           <h2 className="font-medium title-font text-gray-900 mb-4 text-xl">
-            URLをコピーしよう！
+            URLをコピーしよう
           </h2>
           <CopyToClipboard text={url}>
             <button className="flex items-center  text-center py-2 px-4 rounded  focus:outline-none bg-green-500 hover:bg-green-700 text-white font-bold ">
@@ -35,4 +35,4 @@ const CopyURL: React.VFC<Props> = ({ url }) => {
   );
 };
 
-export default CopyURL;
+export default React.memo(CopyURL);

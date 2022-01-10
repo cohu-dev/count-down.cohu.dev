@@ -16,7 +16,7 @@ const OpenNotion = () => {
         </div>
         <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
           <h2 className="font-medium title-font text-gray-900 mb-4 text-xl">
-            URLをNotionに埋め込もう！
+            URLをNotionに埋め込もう
           </h2>
           <a
             className="inline-flex items-center text-center py-2 px-4 rounded  focus:outline-none bg-green-500 hover:bg-green-700 text-white font-bold "
@@ -32,4 +32,4 @@ const OpenNotion = () => {
   );
 };
 
-export default OpenNotion;
+export default React.memo(OpenNotion);

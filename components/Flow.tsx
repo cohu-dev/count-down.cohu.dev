@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Datetime from "./Datetime";
 import { AiOutlineCalendar } from "react-icons/ai";
 import CopyURL from "./Flow/CopyURL";
@@ -6,10 +6,14 @@ import OpenNotion from "./Flow/OpenNotion";
 import Embed from "./Flow/Embed";
 
 const Flow = () => {
-  const [due, setDue] = useState(new Date(new Date().setHours(0, 0, 0, 0)));
+  const [due, setDue] = useState(new Date());
   const [url, setUrl] = useState("");
   useEffect(() => {
-    setUrl(`${process.env.NEXT_PUBLIC_URL}/down?t=${due.getTime()}`);
+    setUrl(
+      `${process.env.NEXT_PUBLIC_URL}/down?t=${Math.floor(
+        due.getTime() / 1000
+      )}`
+    );
   }, [due]);
   return (
     <section className="text-gray-600 body-font">
@@ -28,7 +32,7 @@ const Flow = () => {
             </div>
             <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
               <h2 className="font-medium title-font text-gray-900 mb-4 text-xl">
-                日付・日時を決めよう！
+                日付・日時を決めよう
               </h2>
               <Datetime due={due} setDue={setDue} />
             </div>
@@ -42,4 +46,4 @@ const Flow = () => {
   );
 };
 
-export default Flow;
+export default React.memo(Flow);
