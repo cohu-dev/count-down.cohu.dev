@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.react-datepicker__input-container input {
+  border: 2px solid;
+  padding: 5px;
+}
