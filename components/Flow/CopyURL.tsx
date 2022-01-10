@@ -1,6 +1,9 @@
 import React from "react";
 import { AiOutlineCheckCircle, AiOutlineCopy } from "react-icons/ai";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import toast, { Toaster } from "react-hot-toast";
+
+const notify = () => toast.success("URLをコピーしました");
 
 type Props = {
   url: string;
@@ -8,7 +11,7 @@ type Props = {
 
 const CopyURL: React.VFC<Props> = ({ url }) => {
   return (
-    <div className="flex relative py-5 md:py-10 w-2/3 ml-5 md:ml-10">
+    <div className="flex relative py-5 w-2/3 ml-5 md:ml-10">
       <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
         <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
       </div>
@@ -23,14 +26,19 @@ const CopyURL: React.VFC<Props> = ({ url }) => {
           <h2 className="font-medium title-font text-gray-900 mb-4 text-xl">
             URLをコピーしよう
           </h2>
+          <p className="border-2 mb-2 inline-block p-1 rounded-sm">{url}</p>
           <CopyToClipboard text={url}>
-            <button className="flex items-center  text-center py-2 px-4 rounded  focus:outline-none bg-green-500 hover:bg-green-700 text-white font-bold ">
+            <button
+              className="flex items-center  text-center py-2 px-4 rounded  focus:outline-none bg-green-600 hover:bg-green-800 text-white font-bold "
+              onClick={() => notify()}
+            >
               <AiOutlineCopy className="mr-2" />
-              コピー
+              URLをコピー
             </button>
           </CopyToClipboard>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 };

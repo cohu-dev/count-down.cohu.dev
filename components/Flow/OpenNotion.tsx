@@ -3,7 +3,7 @@ import { BsBox } from "react-icons/bs";
 
 const OpenNotion = () => {
   return (
-    <div className="flex relative py-5 md:py-10 w-2/3 ml-5 md:ml-10">
+    <div className="flex relative py-5 w-2/3 ml-5 md:ml-10">
       <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
         <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
       </div>
@@ -19,7 +19,7 @@ const OpenNotion = () => {
             URLをNotionに埋め込もう
           </h2>
           <a
-            className="inline-flex items-center text-center py-2 px-4 rounded  focus:outline-none bg-green-500 hover:bg-green-700 text-white font-bold "
+            className="inline-flex items-center text-center py-2 px-4 rounded  focus:outline-none bg-green-600 hover:bg-green-800 text-white font-bold "
             target="_blank"
             href="https://www.notion.so/"
           >

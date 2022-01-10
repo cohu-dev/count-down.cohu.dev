@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import useInterval from "use-interval";
 import Card from "../components/Card";
 
-const down = () => {
+const watch = () => {
   const router = useRouter();
   const { t } = router.query;
   if (!t) return <></>;
@@ -31,4 +31,4 @@ const down = () => {
   );
 };
 
-export default down;
+export default watch;
