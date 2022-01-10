@@ -7,10 +7,10 @@ const down = () => {
   const router = useRouter();
   const { t } = router.query;
   if (!t) return <></>;
-  const now = new Date().getTime();
+  const now = Date.now();
   const [time, setTime] = useState(0);
   useInterval(() => {
-    setTime(() => Number(t) - Math.floor(now));
+    setTime(() => Number(t) * 1000 - Math.floor(now));
   }, 1000);
   if (time < 0)
     return (
