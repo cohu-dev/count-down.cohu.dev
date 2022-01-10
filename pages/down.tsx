@@ -15,7 +15,6 @@ const down = () => {
   if (time < 0)
     return (
       <div className="h-screen flex items-center justify-center text-2xl">
-        {now}
         このカウントダウンは既に終了しています
       </div>
     );
