@@ -1,14 +1,18 @@
 import React from "react";
-type CardProps = {
+type Props = {
   n: number;
   digit: string;
 };
-const Card: React.FC<CardProps> = ({ n, digit }) => {
+const Card: React.FC<Props> = ({ n, digit }) => {
   return (
-    <p className="rounded-md bg-orange-200 w-24 h-24 flex items-center justify-center text-6xl font-extrabold">
-      {n}
-      <span className="text-base align-bottom">{digit}</span>
-    </p>
+    <div className="bg-amber-100 w-24 h-24 p-2 rounded-lg">
+      <p className="flex items-center justify-center text-6xl font-extrabold">
+        {n}
+      </p>
+      <span className="block text-right font-semibold align-bottom">
+        {digit}
+      </span>
+    </div>
   );
 };
 

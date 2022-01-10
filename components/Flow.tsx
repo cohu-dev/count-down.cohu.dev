@@ -27,7 +27,7 @@ const Flow = () => {
               <AiOutlineCalendar className="w-12 h-12" />
             </div>
             <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
-              <h2 className="font-medium title-font text-gray-900 mb-1 text-xl">
+              <h2 className="font-medium title-font text-gray-900 mb-4 text-xl">
                 日付・日時を決めよう！
               </h2>
               <Datetime due={due} setDue={setDue} />
