@@ -19,7 +19,7 @@ const OpenNotion = () => {
             URLをNotionに埋め込もう
           </h2>
           <a
-            className="inline-flex items-center text-center py-2 px-4 rounded  focus:outline-none bg-green-500 hover:bg-green-700 text-white font-bold "
+            className="inline-flex items-center text-center py-2 px-4 rounded  focus:outline-none bg-green-600 hover:bg-green-800 text-white font-bold "
             target="_blank"
             href="https://www.notion.so/"
           >
