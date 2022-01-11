@@ -11,7 +11,7 @@ const DateTimePick: React.VFC<Props> = ({ due, setDue }) => {
     <FlowCard
       flowNumber={1}
       Icon={AiOutlineCalendar}
-      heading=" 予定の日時を選ぼう"
+      heading=" 予定の日時を選ぼう！"
       content={<Datetime due={due} setDue={setDue} />}
     />
   );

@@ -9,19 +9,18 @@ const Embed = () => {
       Icon={BsQuestion}
       heading="埋め込みとは？"
       content={
-        <p className="leading-relaxed">
-          「/embed」と打ち込むと出てきます。
-          <br />
-          そのURL貼り付け欄にコピーしたURLを貼り付けます。 やり方は
-          <a
-            target="_blank"
-            className="underline text-blue-400"
-            href="https://twitter.com/cohu_dev/status/1480430003485831171"
-          >
-            こちら
-          </a>
-          から確認できます。
-        </p>
+        <>
+          <p className="leading-relaxed">
+            「/embed」と打ち込むと出てきます。
+            <br />
+            そのURL貼り付け欄にコピーしたURLを貼り付けます。
+          </p>
+          <img
+            className="w-80 mt-4"
+            src={`${process.env.NEXT_PUBLIC_URL}/demo.gif`}
+            alt="Notionに埋め込んだデモGIF画像"
+          />
+        </>
       }
     />
   );

@@ -15,7 +15,7 @@ const CopyURL: React.VFC<Props> = ({ url }) => {
     <FlowCard
       flowNumber={2}
       Icon={AiOutlineCopy}
-      heading="URLをコピーしよう"
+      heading="URLをコピーしよう！"
       content={
         <>
           <p className="border-2 mb-2 inline-block p-1 rounded-sm">{url}</p>
@@ -24,7 +24,7 @@ const CopyURL: React.VFC<Props> = ({ url }) => {
               className="flex items-center  text-center py-2 px-4 rounded  focus:outline-none bg-green-600 hover:bg-green-800 text-white font-bold "
               onClick={() => notify()}
             >
-              <AiOutlineCopy className="mr-2" />
+              <AiOutlineCopy className="mr-2 w-5 h-5" />
               URLをコピー
             </button>
           </CopyToClipboard>

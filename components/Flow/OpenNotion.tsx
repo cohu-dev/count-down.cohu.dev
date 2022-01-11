@@ -7,14 +7,14 @@ const OpenNotion: React.VFC = () => {
     <FlowCard
       flowNumber={3}
       Icon={BsBox}
-      heading="URLをNotionに埋め込もう"
+      heading="URLをNotionに埋め込もう！"
       content={
         <a
           className="inline-flex items-center text-center py-2 px-4 rounded  focus:outline-none bg-green-600 hover:bg-green-800 text-white font-bold "
           target="_blank"
           href="https://www.notion.so/"
         >
-          <BsBox className="mr-2" />
+          <BsBox className="mr-2 w-5 h-5" />
           Notionを開く
         </a>
       }

@@ -2,7 +2,7 @@ import React from "react";
 import { IconType } from "react-icons";
 
 type Props = {
-  flowNumber: 1 | 2 | 3 | "?";
+  flowNumber: 1 | 2 | 3 | "?" | "+";
   Icon: IconType;
   heading: string;
   content: React.ReactNode;
@@ -18,7 +18,7 @@ const FlowCard: React.VFC<Props> = ({ flowNumber, Icon, heading, content }) => {
         {flowNumber}
       </div>
       <div className="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-        <div className="flex-shrink-0 w-24 h-24 bg-green-100 text-green-500 rounded-full inline-flex items-center justify-center">
+        <div className="flex-shrink-0 w-24 h-24 bg-green-200 text-green-600 rounded-full inline-flex items-center justify-center">
           <Icon className="w-12 h-12" />
         </div>
         <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">

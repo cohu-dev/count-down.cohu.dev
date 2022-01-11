@@ -4,10 +4,11 @@ import OpenNotion from "./OpenNotion";
 import Embed from "./Embed";
 import DateTimePick from "./DateTimePick";
 import Countdown from "../Countdown";
+import Share from "./Share";
 const afterOneHour = new Date();
 afterOneHour.setHours(afterOneHour.getHours() + 1);
 
-const Flow = () => {
+const Flow: React.VFC = () => {
   const [due, setDue] = useState<Date>(afterOneHour);
   const [url, setUrl] = useState<string>("");
   useEffect(() => {
@@ -21,6 +22,7 @@ const Flow = () => {
         <CopyURL url={url} />
         <OpenNotion />
         <Embed />
+        <Share />
       </div>
     </section>
   );
