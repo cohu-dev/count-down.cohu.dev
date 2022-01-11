@@ -2,8 +2,8 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 const Description =
-  "Notionでカウントダウンを行うためのサイトです。手順はたったの3ステップです。日時を入力し、生成されたURLをNotionに貼り付けるだけ。";
-const Title = "Notionカウントダウンメーカー";
+  "Notionでカウントダウンを行うウィジェットを作成するためのサイトです。手順はたったの3ステップです。日時を入力し、生成されたURLをNotionに貼り付けるだけ。";
+const Title = "Notionでカウントダウンするためのウィジェットメーカー";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
