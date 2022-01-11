@@ -18,7 +18,7 @@ const Datetime: React.FC<Props> = ({ due, setDue }) => {
       timeFormat="HH:mm"
       timeIntervals={15}
       timeCaption="時間"
-      dateFormat="MMMM d, yyyy h:mm aa"
+      dateFormat="yyyy年MMMMd日aa h:mm"
       locale="ja"
     />
   );
