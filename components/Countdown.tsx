@@ -6,7 +6,6 @@ type Props = { t: Date };
 const Countdown: React.VFC<Props> = ({ t }) => {
   const now = Date.now();
   const [time, setTime] = useState<number>(0);
-  console.log("hfsoh");
   useInterval(() => {
     setTime(() => t.getTime() - now);
   }, 1000);
