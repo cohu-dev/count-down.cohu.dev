@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import useInterval from "use-interval";
 import Card from "./Card";
 type Props = { t: Date };
+
 const Countdown: React.VFC<Props> = ({ t }) => {
   const now = Date.now();
-  const [time, setTime] = useState(0);
+  const [time, setTime] = useState<number>(0);
+  console.log("hfsoh");
   useInterval(() => {
-    setTime(() => Number(t) - Math.floor(now));
+    setTime(() => t.getTime() - now);
   }, 1000);
   if (time < 0)
     return (
