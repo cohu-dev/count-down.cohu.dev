@@ -4,18 +4,14 @@ import OpenNotion from "./OpenNotion";
 import Embed from "./Embed";
 import DateTimePick from "./DateTimePick";
 import Countdown from "../Countdown";
+const afterOneHour = new Date();
+afterOneHour.setHours(afterOneHour.getHours() + 1);
 
 const Flow = () => {
-  const after = new Date();
-  after.setHours(after.getHours() + 1);
-  const [due, setDue] = useState(after);
-  const [url, setUrl] = useState("");
+  const [due, setDue] = useState<Date>(afterOneHour);
+  const [url, setUrl] = useState<string>("");
   useEffect(() => {
-    setUrl(
-      `${process.env.NEXT_PUBLIC_URL}/watch?t=${Math.floor(
-        due.getTime() / 1000
-      )}`
-    );
+    setUrl(`${process.env.NEXT_PUBLIC_URL}/watch?t=${due.getTime()}`);
   }, [due]);
   return (
     <section className="text-gray-600 body-font">
