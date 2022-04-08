@@ -1,5 +1,5 @@
 {
   "redirects": [
-    { "source": "www.count-down.site/", "destination": "https://count-down.cohu.dev", "permanent": true }
+    { "source": "/", "destination": "https://count-down.cohu.dev", "permanent": true }
   ]
 }
