@@ -8,11 +8,12 @@ const watch: NextPage = () => {
   const router = useRouter();
   const { t } = router.query;
   if (!t) return <></>;
+  const replacedT = t.toString().replace(/\//g, "");
   const now = Date.now();
   const [time, setTime] = useState(0);
   useInterval(() => {
-    setTime(() => Number(t) - now);
-    if (isNaN(+t)) router.push("/");
+    setTime(() => Number(replacedT) - now);
+    if (isNaN(+replacedT)) router.push("/");
   }, 1000);
   if (time < 0)
     return (
