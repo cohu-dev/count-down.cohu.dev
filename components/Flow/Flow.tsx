@@ -12,7 +12,7 @@ const Flow: React.VFC = () => {
   const [due, setDue] = useState<Date>(afterTwoHour);
   const [url, setUrl] = useState<string>("");
   useEffect(() => {
-    setUrl(`${process.env.NEXT_PUBLIC_URL}/watch/${due.getTime()}`);
+    setUrl(`${process.env.NEXT_PUBLIC_URL}/watch?t=${due.getTime()}`);
   }, [due]);
   return (
     <section className="text-gray-600 body-font">
