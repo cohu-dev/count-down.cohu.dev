@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import useInterval from "use-interval";
-import Card from "../components/Card";
+import Card from "../../components/Card";
 
 const watch: NextPage = () => {
   const router = useRouter();
