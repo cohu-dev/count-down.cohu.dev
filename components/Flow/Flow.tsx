@@ -17,7 +17,7 @@ const Flow: React.VFC = () => {
   return (
     <section className="text-gray-600 body-font">
       <p className="text-center mx-auto text-md bg-yellow-200 block">
-        Notionに本サイトのカウントダウンを埋め込んだ際にトップページが表示されるバグを修正しました。ご迷惑おかけしました。
+        バグ修正の最終確認中です。ご迷惑をおかけしますが、しばらくお待ちください。
       </p>
       <Countdown t={due} />
       <div className="md:px-5 py-2 w-full lg:w-1/2 mx-auto flex flex-wrap">
