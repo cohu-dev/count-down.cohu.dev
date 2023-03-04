@@ -12,12 +12,12 @@ const Flow: React.VFC = () => {
   const [due, setDue] = useState<Date>(afterTwoHour);
   const [url, setUrl] = useState<string>("");
   useEffect(() => {
-    setUrl(`${process.env.NEXT_PUBLIC_URL}/watch?t=${due.getTime()}`);
+    setUrl(`${process.env.NEXT_PUBLIC_URL}/watch/${due.getTime()}`);
   }, [due]);
   return (
     <section className="text-gray-600 body-font">
       <p className="text-center mx-auto text-md bg-yellow-200 block">
-        現在Notionに本サイトのカウントダウンを貼り付けた際にトップページが表示されるバグがあります【対応予定】
+        Notionに本サイトのカウントダウンを埋め込んだ際にトップページが表示されるバグを修正しました。ご迷惑おかけしました。
       </p>
       <Countdown t={due} />
       <div className="md:px-5 py-2 w-full lg:w-1/2 mx-auto flex flex-wrap">
