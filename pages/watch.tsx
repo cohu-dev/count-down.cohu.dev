@@ -19,9 +19,7 @@ const watch: NextPage = () => {
   if (time < 0)
     return (
       <div className="h-screen flex items-center justify-center text-2xl">
-        このカウントダウンは既に終了しています。
-        <br />
-        仕様変更によるエラーの場合ご迷惑おかけしますが、再度設定をお願い致します。
+        このカウントダウンは既に終了しています
       </div>
     );
   return (
@@ -30,7 +28,7 @@ const watch: NextPage = () => {
         <Head>
           <meta
             property="og:url"
-            content={`${process.env.NEXT_PUBLIC_URL}/watch/${t}`}
+            content={`${process.env.NEXT_PUBLIC_URL}/watch?t=${t}`}
           ></meta>
         </Head>
         <Card n={Math.floor(time / (1000 * 60 * 60 * 24))} digit="Days" />
