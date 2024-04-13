@@ -11,7 +11,7 @@ const Share = () => {
       heading="共有しよう！"
       content={
         <p>
-          良いなと思ったらTwitterなどで共有してくれると嬉しいです！
+          良いなと思ったらXなどで共有してくれると嬉しいです！
           <br />
           <a
             className="inline-flex bg-gray-600 p-2 mt-2 items-center rounded-md text-white font-semibold"
