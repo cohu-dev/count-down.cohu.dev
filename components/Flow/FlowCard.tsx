@@ -10,7 +10,7 @@ type Props = {
 
 const FlowCard: React.VFC<Props> = ({ flowNumber, Icon, heading, content }) => {
   return (
-    <div className="flex relative py-5 w-2/3 ml-5 md:ml-10">
+    <div className="flex relative py-5 px-2 ml-5 md:ml-10">
       <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
         <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
       </div>

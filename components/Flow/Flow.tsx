@@ -15,9 +15,9 @@ const Flow: React.VFC = () => {
     setUrl(`${process.env.NEXT_PUBLIC_URL}/watch?t=${due.getTime()}`);
   }, [due]);
   return (
-    <section className="text-gray-600 body-font">
+    <section className="text-gray-600 body-font select-none">
       <Countdown t={due} />
-      <div className="md:px-5 py-2 w-full lg:w-1/2 mx-auto flex flex-wrap">
+      <div className="md:px-5 py-2 w-full lg:w-3/4 mx-auto flex flex-wrap">
         <DateTimePick due={due} setDue={setDue} />
         <CopyURL url={url} />
         <OpenNotion />
