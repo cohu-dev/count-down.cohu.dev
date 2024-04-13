@@ -24,7 +24,7 @@ export default class extends Document {
             }}
           />
         </Head>
-        <body>
+        <body className="select-none">
           <Main />
           <Html />
           <NextScript />

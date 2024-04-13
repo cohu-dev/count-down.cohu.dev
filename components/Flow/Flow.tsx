@@ -15,7 +15,7 @@ const Flow: React.VFC = () => {
     setUrl(`${process.env.NEXT_PUBLIC_URL}/watch?t=${due.getTime()}`);
   }, [due]);
   return (
-    <section className="text-gray-600 body-font select-none">
+    <section className="text-gray-600 body-font">
       <Countdown t={due} />
       <div className="md:px-5 py-2 w-full xl:w-1/2 mx-auto flex flex-col">
         <DateTimePick due={due} setDue={setDue} />
