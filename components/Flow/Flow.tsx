@@ -16,9 +16,6 @@ const Flow: React.VFC = () => {
   }, [due]);
   return (
     <section className="text-gray-600 body-font">
-      <p className="text-center mx-auto text-md bg-yellow-200 block">
-        バグを修正しました。ご迷惑おかけしました。
-      </p>
       <Countdown t={due} />
       <div className="md:px-5 py-2 w-full lg:w-1/2 mx-auto flex flex-wrap">
         <DateTimePick due={due} setDue={setDue} />
