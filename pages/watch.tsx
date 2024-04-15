@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import useInterval from "use-interval";
 import Card from "../components/Card";
+import Link from "next/link";
 
 const watch: NextPage = () => {
   const router = useRouter();
@@ -18,8 +19,13 @@ const watch: NextPage = () => {
   }, 1000);
   if (time < 0)
     return (
-      <div className="h-screen flex items-center justify-center text-2xl">
-        このカウントダウンは既に終了しています
+      <div className="h-screen flex flex-col items-center justify-center text-2xl">
+        <p>このカウントダウンは既に終了しています</p>
+        <p>
+          <Link href="/" className="text-blue-500 underline">
+            トップへ戻る
+          </Link>
+        </p>
       </div>
     );
   return (
