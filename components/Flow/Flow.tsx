@@ -5,6 +5,7 @@ import Embed from "./Embed";
 import DateTimePick from "./DateTimePick";
 import Countdown from "../Countdown";
 import Share from "./Share";
+import CopyEmbedHtml from "./CopyEmbedHtml";
 const afterTwoHour = new Date();
 afterTwoHour.setHours(afterTwoHour.getHours() + 2);
 
@@ -23,6 +24,7 @@ const Flow: React.VFC = () => {
         <OpenNotion />
         <Embed />
         <Share />
+        <CopyEmbedHtml url={url} />
       </div>
     </section>
   );

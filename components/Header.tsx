@@ -22,7 +22,7 @@ const Header = () => {
         <a href="https://github.com/cota-eng/notion-count-down" target="_blank">
           <BsGithub className="h-6 w-6 text-gray-800" />
         </a>
-        <span className="ml-4 hidden md:inline">update: 2024.04.13</span>
+        <span className="ml-4 hidden md:inline">update: 2024.04.17</span>
       </p>
     </header>
   );
